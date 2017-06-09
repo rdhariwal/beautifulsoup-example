@@ -1,10 +1,11 @@
 # beautifulsoup-example
 
-`virtualenv`
+```
+git clone https://github.com/agguzman/beautifulsoup-example.git
+cd beautifulsoup-example
 
-`source bin/active`
+virtualenv venv
+source venv/bin/active
 
-`pip install requests`
-
-`pip install bs4`
-
+pip install requests bs4
+```

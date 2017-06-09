@@ -1,4 +1,4 @@
-# beautifulsoup-book-download
+# beautifulsoup-example
 
 `virtualenv`
 

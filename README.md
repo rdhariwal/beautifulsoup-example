@@ -7,5 +7,5 @@ cd beautifulsoup-example
 virtualenv venv
 source venv/bin/active
 
-pip install requests bs4
+pip install -r requirements.txt
 ```

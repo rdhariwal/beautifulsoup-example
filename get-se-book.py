@@ -7,7 +7,7 @@ base_url = "http://www.cl.cam.ac.uk/~rja14/"
 soup_response = BeautifulSoup(requests.get("{}{}".format(base_url, "book.html")).text, "html5lib").ul
 links = [(item.text, "{}{}".format(base_url, item.a['href'])) for item in soup_response.findAll('li')]
 
-dir_name = "books"
+dir_name = "book"
 directory = "{}/{}/".format(os.getcwd(), dir_name)
 os.makedirs(directory)
 print(directory)

@@ -10,7 +10,6 @@ links = [(item.text, "{}{}".format(base_url, item.a['href'])) for item in soup_r
 dir_name = "book"
 directory = "{}/{}/".format(os.getcwd(), dir_name)
 os.makedirs(directory)
-print(directory)
 for l in links:
     title = l[0].strip().replace(":", "").replace(",", "").replace("?", "").replace(" ", "_")
     file_name = "{}{}{}".format(directory, title, ".pdf")

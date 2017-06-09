@@ -11,13 +11,13 @@ dir_name = "book"
 directory = "{}/{}/".format(os.getcwd(), dir_name)
 os.makedirs(directory)
 for l in links:
-    title = l[0].strip().replace(":", "").replace(",", "").replace("?", "").replace(" ", "_")
-    file_name = "{}{}{}".format(directory, title, ".pdf")
+    file_name = l[0].strip().replace(":", "").replace(",", "").replace("?", "").replace(" ", "_")
+    path = "{}{}{}".format(directory, file_name, ".pdf")
     url = l[1]
     print("Getting {}...".format(l[0]))
-    pdf_res = requests.get(url)
-    with open(file_name, "w") as f:
-        f.write(pdf_res.content)
-        print("Wrote to {}. Finished with it.".format(file_name))
+    response = requests.get(url)
+    with open(path, "w") as f:
+        f.write(response.content)
+        print("Wrote to {}. Finished with it.\n".format(path))
 
 print("All done.")
